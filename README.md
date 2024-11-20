@@ -10,6 +10,7 @@
 
 # Uso
 
+- Seguimos los pasos igual que el frontend hasta llegar a clonar el proyecto.
 - Para iniciar debes clonar este repositorio en tu equipo por medio del siguiente comando de git:
 - Si eres usuario windows debes clonar esta carpeta dentro de la carpeta raíz del WSL.
 
@@ -51,3 +52,13 @@ docker compose -f .docker/compose.yaml run node npx sequelize-cli db:migrate
 ```
 docker compose -f .docker/compose.yaml run node npx sequelize-cli db:seed:all
 ```
+
+* Luego de todo este procedimiento se tiene que enlazar el backend y el frontend para ello primero apagamos los contenedores con el comando:
+* para ello debemos entrar al directorio del backend ( **wie-plataforma-iot/wie-backend-2024** ) )y lo mismo para el frontend
+```
+docker compose -f .docker/compose.yaml down
+```
+
+- Despues se crea un archivo **docker-compose** en la carpeta **wie-plataforma-iot** para que enlace al frontend y el backend
+- para ello nos ubicamos en la terminal wie-plataforma-iot y ejecutamos **`code .`** para abrir una pantalla en el vscode y a ese nivel crear
+- el archivo **`docker-compose.yaml`**
