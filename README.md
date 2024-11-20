@@ -65,12 +65,12 @@ docker compose -f .docker/compose.yaml down
 ```
 services:
   node-be:
-    build: iot-backend-2024/.docker/node
+    build: wie-backend-2024/.docker/node
     ports:
       - "88:88"
       - "2810:2810"
     volumes:
-      - ./iot-backend-2024:/usr/app
+      - ./wie-backend-2024:/usr/app
     environment:
       - DB_HOST=mysql
       - DB_USER=root
@@ -82,11 +82,11 @@ services:
       - iot-network
     command: npm run start
   node-fe:
-    build: iot-front-2024/.docker/node
+    build: wie-front-2024/.docker/node
     ports:
       - "8080:8080"
     volumes:
-      - ./iot-front-2024:/usr/app
+      - ./wie-front-2024:/usr/app
     networks:
       - iot-network
     command: npm run dev
