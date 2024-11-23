@@ -129,5 +129,9 @@ networks:
 volumes:
   mysql-data:
 ```
-  
-    
+
+- al final desde la terminal y en la carpeta ***wie-plataforma-iot*** levantamos los contenedores con el comando:
+```
+docker compose up -d
+```
+
