@@ -62,7 +62,7 @@ docker compose -f .docker/compose.yaml down
 - Despues se crea un archivo **docker-compose** en la carpeta **wie-plataforma-iot** para que enlace al frontend y el backend
 - para ello nos ubicamos en la terminal wie-plataforma-iot y ejecutamos **`code .`** para abrir una pantalla en el vscode y a ese nivel crear
 - el archivo **`docker-compose.yaml`** con esto se conecta los contenedores del backend y el frontend
-- comentamos el servicio de mqtt por ahora 
+- comentamos el servicio de emqx por ahora 
 ```
 services:
   node-be:
