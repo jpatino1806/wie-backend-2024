@@ -62,6 +62,7 @@ docker compose -f .docker/compose.yaml down
 - Despues se crea un archivo **docker-compose** en la carpeta **wie-plataforma-iot** para que enlace al frontend y el backend
 - para ello nos ubicamos en la terminal wie-plataforma-iot y ejecutamos **`code .`** para abrir una pantalla en el vscode y a ese nivel crear
 - el archivo **`docker-compose.yaml`** con esto se conecta los contenedores del backend y el frontend
+- comentamos el servicio de mqtt por ahora 
 ```
 services:
   node-be:
@@ -148,4 +149,7 @@ docker compose run node-be npx sequelize-cli db:migrate
 ```
 docker compose run node-be npx sequelize-cli db:seed:all
 ```
+- bien, hasta aqui es la configuracion inicial del proyecto, ya se puede ir al navegador localhost:8080 y hacer login sin problema entrando a la pag de dispositivos y usuarios
+- lo que sigue de la aplicacion lo veremos en los siguientes archivos de texto.
+- 
 
