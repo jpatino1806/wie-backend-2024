@@ -135,3 +135,17 @@ volumes:
 docker compose up -d
 ```
 
+- una vez que hemos dockerizado el frontend con el backend en un solo contenedor ejecutamos lo siguiente para crear base de datos, tablas y usuario inicial:
+- Ejecutar comando npx sequelize-cli db:create para crear la base de datos
+```
+docker compose run node-be npx sequelize-cli db:create
+```
+- Ejecutar comando npx sequelize-cli db:migrate para construcción de tablas base.
+```
+docker compose run node-be npx sequelize-cli db:migrate
+```
+- Ejecutar el comando npx sequelize-cli db:seed:all para crear usuario demo.
+```
+docker compose run node-be npx sequelize-cli db:seed:all
+```
+
